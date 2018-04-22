@@ -19,15 +19,6 @@ import javax.imageio.ImageIO;
 
 public class MonsterMaker extends JFrame {
 	
-	/*public void init() {
-		try {
-			SwingUtilities.invokeAndWait(new Runnable() {
-				public void run() {
-					JLabel label = new JLabel("Hello World");
-				}
-			})
-		}
-	}*/
 	private BufferedImage scanPic;
 	private String sequence;
 
@@ -38,14 +29,8 @@ public class MonsterMaker extends JFrame {
         setResizable(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
- 
-        //setLayout(new GridLayout(2, 0));
         JPanel bttnLbl = new JPanel(new GridLayout(3, 2));
         bttnLbl.setMinimumSize(new Dimension(320, 20));
-        /*JPanel monsters = new JPanel(new FlowLayout(FlowLayout.LEFT));
-        monsters.setSize(400, 300);
-        monsters.setBackground(Color.WHITE);*/
-
 
 		JButton uploadB = 
 			new JButton("Upload a picture of my DNA strand");
@@ -215,9 +200,6 @@ public class MonsterMaker extends JFrame {
 		int red = c.getRed();
 		int green = c.getGreen();
 		int blue = c.getBlue();
-		/*int red = Color.red(rgbVal);
-		int blue = Color.blue(rgbVal);
-		int green = Color.green(rgbVal);*/
 
 		if(Math.abs(red-green) < 50 && blue < 100) {
 			return 'Y';
